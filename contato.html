@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdeiaTech | Solicite um reparo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="public/css/contatos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+<body>
+    <!-- Início Navbar -->
+    <nav class="navbar" role="navegação" aria-label="barra de navegação">
+        <div class="container">
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="index.html" class="navbar-item">Início</a>
+                    <a class="navbar-item">Cursos</a>
+                    <a class="navbar-item">Parceiros</a>
+            
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                        Mais
+                        </a>            
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item">Sobre</a>
+                            <a class="navbar-item">Jobs</a>
+                            <a class="navbar-item">Contact</a>
+                            <hr class="navbar-divider">
+                            <a class="navbar-item">Report an issue</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <a href="https://api.whatsapp.com/send?phone=5534997807773&text=Olá, gostaria de solicitar um reparo." class="navbar-item">
+                        <img src="public/images/Whatsapp.svg" alt="Página no instagram">
+                    </a>
+                    <a href="https://www.instagram.com/ideia_tech" class="navbar-item">
+                        <img src="public/images/Instagram.svg" alt="Página no instagram">
+                    </a>
+                    <a href="https://facebook.com" class="navbar-item">
+                        <img src="public/images/facebook.svg" alt="Página no facebook">
+                    </a>
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a href="contato.html" class="button is-primary is-light">
+                                <strong>Solicite um reparo</strong>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Fim Navbar -->
+    <!-- início Section-->
+    <div class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column column-left">
+                    <h1 class="title has-text-centered is-4">Solicitação de reparo</h1>
+                    <form action="enviar.php" method="post">
+                        <div class="field">
+                            <label class="label">Nome</label>
+                            <div class="control has-icons-left">
+                                <input  name ="nome "type="text" class="input" placeholder="Insira seu nome">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">E-mail</label>
+                            <div class="control has-icons-left">
+                                <input  name ="nome" type="email" class="input" placeholder="Insira seu e-mail">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Telefone</label>
+                            <div class="control has-icons-left">
+                                <input  name ="telefone" type="tel" class="input" placeholder="(00) 00000-0000">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Selecione seu equipamento</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select name="equipamento">
+                                        <option>Computador</option>
+                                        <option>Notebook</option>
+                                        <option>Celular</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Descreva seu problema</label>
+                            <div class="control">
+                                <textarea name="mensagem" class="textarea" placeholder="Descreva seu problema" maxlength="3000" autocapitalize="on"></textarea>
+                            </div>
+                        </div>
+                        <div class="field is-grouped">
+                            <div class="control">
+                                <button class="button is-primary is-light"><strong>Enviar</strong></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="column">
+                    <h1 class="title has-text-centered is-4">Onde estamos</h1>
+                    <iframe id="mapid" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.387051690691!2d-46.51756458504415!3d-18.60165290317937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ae8ab4bb842bb3%3A0xaf91d82d666baf4c!2sR.%20Maranh%C3%A3o%2C%20395%20-%20C%C3%B4nego%20Get%C3%BAlio%2C%20Patos%20de%20Minas%20-%20MG%2C%2038700-204!5e0!3m2!1spt-BR!2sbr!4v1608934163320!5m2!1spt-BR!2sbr"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim Section -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="public/js/validate.js"></script>
+    <script src="public/js/contatos.js"></script>
+</body>
+</html>
